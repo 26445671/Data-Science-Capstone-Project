@@ -1,8 +1,4 @@
 
-
-
-## Project overview
-=======
 # Data-Science-Capstone-Project
 ## SS1
 ## STADIOEquities
