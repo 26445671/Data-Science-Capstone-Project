@@ -1,32 +1,51 @@
-# Data-Science-Capstone-Project
-## STADIOEquities
-## PART A
-## Motivation
-The retail investing and fintech industry is increasingly using digital platforms to make investing more accessible. STADIOEquities has attracted approximately 2.3 million registered accounts, particularly among young and first-time investors. However, 41% of these accounts have never been funded, while customer dormancy within six months has increased to 31%.
+# Bank Marketing ML
 
-However, STADIOEquities faces challenges in converting registered customers into active, long-term investors. The registration-to-first-deposit conversion rate has declined from 64% to 59%, while onboarding abandonment and dormancy have increased. 
-STADIOEquities already collects extensive data on customer behavior, funding, financial, trading, demographics, support, and compliance. However, these data are not fully utilized to identify customers who are likely to activate or become inactive, and customers who are likely to make a deposit or not. Current onboarding communications and nudges are largely delivered according to fixed schedules rather than being targeted according to individual customer behavior. Again, STADIOEquities spends about R180 to acquire each customer, so when new customers do not become active investors, the company loses potential value from its marketing investment. Addressing this issue is important because customer activation and engagement directly influence STADIOEquities' revenue and the return on its customer acquisition costs.
+This project applies machine learning to the UCI Bank Marketing dataset to predict whether a client will subscribe to a term deposit after a direct marketing campaign.
 
-Therefore, a data science approach is uniquely suited to solving this challenge. Instead of treating all clients uniformly, predictive models and clustering techniques can uncover patterns and client behavior that distinguish likely activators from likely drop-offs, and segment clients by investing style. Predictive analytics can identify which new registrants are most likely to fund accounts, enabling targeted onboarding interventions that reduce wasted marketing spend. Segmentation models (e.g., clustering) can group clients by behavior, allowing personalized nudges, product recommendations, and premium subscription offers that resonate with each profile. Churn prediction can flag accounts at risk of dormancy, enabling proactive re-engagement strategies. Natural language processing (NLP) can mine support tickets and feedback to detect recurring pain points, reducing confusion and improving client satisfaction. 
-Therefore, this study seeks to generate evidence by using a data science approach that may support customer activation, early intervention, targeted engagement, and improved retention, helping STADIOEquities increase the number of active, long-term high-value investors, securing both revenue growth and financial inclusion in South Africa.
+## Project overview
 
-## PART B
-## Problem Statement
+The workflow is organized into four stages:
 
-STADIOEquities has successfully lowered the barriers to entry for retail investing in South Africa, attracting over 2.3 million registered accounts. However, the platform faces a critical challenge: a large proportion of accounts remain unfunded, and accounts quickly lapse into dormancy. According to the data provided, currently, 41% of accounts never deposit, and 31% of funded accounts become inactive within six months. This “activation gap” undermines the company’s economic model, as their revenue streams depend on funded balances, trading activity, and long-term engagement.  Although the company collects extensive data on customer demographics, app and web behavior, onboarding activities, deposits, withdrawals, funding, trading activity, and marketing engagement, these data sources are not yet fully integrated to generate actionable customer-level insight
+1. Data preprocessing
+2. Feature engineering
+3. Model development
+4. Model evaluation and recommendations
 
-The lack of differentiated client experiences further compounds the issue. Despite diverse investor behaviors ranging from disciplined savers to speculative traders, all clients receive the same onboarding nudges, product suggestions, and subscription offers. This one-size-fits-all approach leads to poor conversion, declining premium subscription uptake, and rising support complaints.
-Thus, the study aims to apply a data science approach to develop and evaluate machine learning classification models to predict client activation and dormancy, and identify the factors associated with increased dormancy risk and unfunded accounts. By leveraging predictive modelling, clustering, and churn analysis, the study seeks to improve conversion rates, reduce dormancy, and increase the number of funded accounts, aligning with STADIOEquities’ 2030 strategy of turning registrations into lifetime investors, driving revenue growth, reducing wasted acquisition and marketing expenditure, and advancing financial inclusion in South Africa.
+The project compares two classification models:
 
+- Logistic Regression
+- Gradient Boosting
 
-## PART E 
-## RAIDD LOG TABLE
-|    RAAIDD  Category     |           DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     Risks              |     - The data may be   imbalanced (few customers deposit or go dormant compared to many who don’t).   - Some records may be missing, duplicated, or inconsistent. - Using future   data by mistake could make models look unrealistically good. - Customer   behaviour may change over time, reducing model accuracy. - Sensitive customer   data must be handled carefully to meet privacy rules.                                                        |
-|     Actions            |     - Combine all   customer data sources using a consistent ID. - Check and clean data for   errors or missing values. - Define two target outcomes: deposit within 30   days and dormancy within six months. - Preprocess data (encode categories,   scale values, handle missing data). - Train and compare machine learning   models, evaluate with proper metrics. - Turn model insights into practical   strategies for activation and retention.    |
-|     Assumptions        |     - Past customer   data reflects future behaviour. - Customer IDs can reliably link records   across systems. - Transaction data can show deposits within 30 days. -   Account activity data can show dormancy within six months. - Available   variables (demographics, behaviour, trading, etc.) are enough to predict   outcomes. - There are enough examples of both outcomes to train reliable   models.                                           |
-|     Issues             |     - The biggest   issue is class imbalance: too few customers deposit or go dormant compared to   the majority. - This could make models look accurate overall but fail to   identify the customers STADIOEquities actually cares about. - Will be   addressed with class‑balancing techniques and by focusing on precision,   recall, F1, and ROC‑AUC.                                                                                                  |
-|     Decisions          |     - Build two   separate models: one for predicting deposits within 30 days, and another for   predicting dormancy within six months. - This ensures each model has a clear   population, timeframe, and business goal.                                                                                                                                                                                                                                  |
-|     Dependencies       |     - Data must be   available and integrated before modelling. - Customer IDs must be consistent   across systems. - Data cleaning must happen before targets can be defined. - Targets   must be defined before models can be trained. - Models must be trained before   evaluation. - Evaluation must be done before business recommendations can be   made.                                                                                            |
+## Project structure
 
+### Part B – Modelling
+
+- [Preprocessing](Preprocessing.md/README.md)
+- [Feature Engineering](Feature%20Engineering.md/README.md)
+- [Model 1 – Logistic Regression](Model1.MD)
+- [Model 2 – Gradient Boosting](Model2.MD)
+
+### Part C – Model performance
+
+- [Model 1 Performance](Model1Performance.MD)
+- [Model 2 Performance](Model2Performance.MD)
+- [Model Comparison](Comparison.MD)
+
+### Part D – Recommendations
+
+- [Part D Recommendations Report](Part_D_Recommendations_Report.pdf)
+
+## Dataset
+
+The project uses the UCI Bank Marketing dataset, which contains customer demographics, previous marketing contact history, and campaign-level features.
+
+## Objectives
+
+- Clean and standardize raw campaign data
+- Derive meaningful features to capture customer behavior
+- Train predictive models that estimate subscription probability
+- Compare model performance and recommend business actions
+
+## Requirements
+
+The Python dependencies required to run the project are listed in `requirements.txt`.
