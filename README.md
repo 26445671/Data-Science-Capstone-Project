@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-# Bank Marketing ML
 
-This project applies machine learning to the UCI Bank Marketing dataset to predict whether a client will subscribe to a term deposit after a direct marketing campaign.
+
 
 ## Project overview
 =======
 # Data-Science-Capstone-Project
+## SS1
 ## STADIOEquities
 ## PART A
 ## Motivation
@@ -20,30 +19,28 @@ Segmentation models (e.g., clustering) can group clients by behavior, allowing p
 
 Therefore, the study aims to apply a data science approach to develop and evaluate machine learning classification models for identifying registered accounts that are most likely to remain unfunded. The study will also examine the customer characteristics and behavioral factors associated with an account remaining unfunded after registration. The resulting customer segments and predictive insights may help STADIOEquities better understand the activation gap and identify groups of customers that may require different engagement approaches. 
 
->>>>>>> d8fd2b0fa1bf2cbd6d2ded689f7b393b3973a260
-
-The workflow is organized into four stages:
-
-<<<<<<< HEAD
-1. Data preprocessing
-2. Feature engineering
-3. Model development
-4. Model evaluation and recommendations
-
-The project compares two classification models:
-=======
+## Problem Statement
 STADIOEquities has successfully lowered the barriers to entry for retail investing in South Africa, attracting over 2.3 million registered accounts. However, the platform faces a critical challenge: a large proportion of accounts remain unfunded, and accounts quickly lapse into dormancy. According to the data provided, currently, 41% of accounts never deposit, and 31% of funded accounts become inactive within six months. This “activation gap” undermines the company’s economic model, as its revenue streams depend on funded balances, trading activity, and long-term engagement. In addition, STADIOEquities incurs an acquisition cost of approximately R180 per account, meaning that accounts that remain unfunded provide limited opportunity to recover the cost of acquisition. 
 
 Although the company collects extensive data on customer demographics, app and web behavior, onboarding activities, deposits, withdrawals, funding, trading activity, and marketing engagement, these data sources are not yet fully integrated to generate actionable customer-level insight. Therefore, STADIOEquities has an opportunity to use its available customer, onboarding, behavioral, and marketing data to better understand the characteristics of accounts that remain unfunded.  The lack of differentiated client experiences further compounds the issue. Despite diverse investor behaviors ranging from disciplined savers to speculative traders, all clients receive the same onboarding nudges, product suggestions, and subscription offers. This one-size-fits-all approach leads to poor conversion, declining premium subscription uptake, and rising support complaints.  
 
 Thus, the study aims to apply a data science approach to develop and evaluate machine learning classification models to predict which registered accounts are most likely to make their first deposit within 30 days. By leveraging predictive modeling, clustering, and churn analysis, the study seeks to identify groups and characteristics associated with activation vs. remaining unfunded and provide evidence that could support differentiated onboarding and engagement. This aligns with STADIOEquities’ 2030 strategy of turning registrations into lifetime investors, driving revenue growth, reducing wasted acquisition and marketing expenditure, and advancing financial inclusion in South Africa.
 
->>>>>>> d8fd2b0fa1bf2cbd6d2ded689f7b393b3973a260
+## SS2
+# Bank Marketing ML
 
+This project applies machine learning to the UCI Bank Marketing dataset to predict whether a client will subscribe to a term deposit after a direct marketing campaign.The findings provide a useful methodological foundation for the proposed STADIOEquities capstone project. However, the Bank Marketing problem differs from the intended STADIOEquities objective. The Bank Marketing dataset focuses on predicting whether a customer will subscribe to a term deposit following a marketing campaign, whereas the proposed SS1 project focuses on predicting which registered accounts are likely to make their first deposit within 30 days of registration, referred to as customer activation. Consequently, the Bank Marketing dataset should be regarded primarily as a public benchmark for developing and evaluating the modelling approach, rather than as a direct representation of the STADIOEquities customer activation problem.
+# The project compares two classification models:
 - Logistic Regression
 - Gradient Boosting
 
 ## Project structure
+The workflow is organized into four stages:
+1. Data preprocessing
+2. Feature engineering
+3. Model development
+4. Model evaluation and recommendations
+
 
 ### Part B – Modelling
 
