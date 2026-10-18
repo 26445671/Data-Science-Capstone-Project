@@ -4,8 +4,7 @@ Contains graphs and visualisations created during the project.
 
 Examples include:
 
-- Customer activation distributions
-- Dormancy distributions
+- Training versus validation and test performance
 - Feature distributions
 - Correlation plots
 - Confusion matrices
