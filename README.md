@@ -74,7 +74,7 @@ The Python dependencies required to run the project are listed in `requirements.
 # SS3 Part B — STADIOEquities First-Deposit Activation Prediction
 # Files
 - SS3_PartB.ipynb — end-to-end notebook for loading, preprocessing, training, validation and visualisation.
-- stadioequities_account_activation_extract.csv — client extract supplied for this task (copy this file into the same folder as the notebook).
+- stadioequities_account_activation_extract.csv — client extract supplied for this task .
 - requirements.txt — Python dependencies.
 # Project objective
 Apply the Gradient Boosting Classifier selected as the final method to predict whether a registered account makes a first deposit within the defined 30-day activation window. The target is first_deposit_made (0 = no first deposit, 1 = first deposit).
