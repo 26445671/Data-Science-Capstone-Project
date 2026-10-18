@@ -69,3 +69,31 @@ The project uses the UCI Bank Marketing dataset, which contains customer demogra
 ## Requirements
 
 The Python dependencies required to run the project are listed in `requirements.txt`.
+
+
+# SS3 Part B — STADIOEquities First-Deposit Activation Prediction
+Files
+- SS3_PartB.ipynb — end-to-end notebook for loading, preprocessing, training, validation and visualisation.
+- stadioequities_account_activation_extract.csv — client extract supplied for this task (copy this file into the same folder as the notebook).
+- requirements.txt — Python dependencies.
+Project objective
+Apply the Gradient Boosting Classifier selected as the final method to predict whether a registered account makes a first deposit within the defined 30-day activation window. The target is first_deposit_made (0 = no first deposit, 1 = first deposit).
+Dataset summary
+The supplied extract contains 11,447 rows and 39 columns. Target counts are:
+- No first deposit (0): 7,546 (65.92%)
+- First deposit (1): 3,901 (34.08%)
+The target distribution is moderately imbalanced. Therefore, precision, recall, F1, ROC-AUC and average precision are reported in addition to accuracy.
+How to run
+1. Put SS3_PartB.ipynb and stadioequities_account_activation_extract.csv in the same directory.
+2. Create/activate a Python environment.
+3. Install dependencies:pip install -r requirements.txt
+4. Open Jupyter Notebook or JupyterLab and run all cells in SS3_PartB.ipynb from top to bottom.
+Method and design choices
+- Model: GradientBoostingClassifier.
+- Split: 60% training, 20% validation, 20% held-out test, stratified by target.
+- Preprocessing: median imputation and scaling for numeric variables; most-frequent imputation and one-hot encoding for categorical variables.
+- Leakage controls: identifier, target, direct deposit outcome fields and downstream account outcomes are excluded from predictors.
+- Evaluation: accuracy, precision, recall, F1, ROC-AUC, average precision, classification report and confusion matrix.
+- Visualisations: training/validation metric comparison, unseen-test confusion matrix, ROC curve, precision–recall curve and feature importance.
+Important limitation
+The extract does not document the exact observation timestamp for every predictor. Some behavioural fields may have been collected during the same 30-day period as the target. Confirm the prediction point and remove any feature not available at that point before treating the model as a prospective prediction system. Feature importance is not causal evidence.
