@@ -93,6 +93,7 @@ The target distribution is moderately imbalanced. Therefore, precision, recall, 
 - Split: 60% training, 20% validation, 20% held-out test, stratified by target.
 - Preprocessing: median imputation and scaling for numeric variables; most-frequent imputation and one-hot encoding for categorical variables.
 - Leakage controls: identifier, target, direct deposit outcome fields and downstream account outcomes are excluded from predictors.
+- Imbalanced dataset has been treated with class weights
 - Evaluation: accuracy, precision, recall, F1, ROC-AUC, average precision, classification report and confusion matrix.
 - Visualisations: training/validation metric comparison, unseen-test confusion matrix, ROC curve, precision–recall curve and feature importance.
 # Important limitation
