@@ -1,3 +1,2 @@
-# this folder contains the data sets, both
-# raw original dataset and
-# cleaned and prepared data for the project
+# this folder contains the data sets
+stadioequities_account_activation_extract.csv — client extract supplied for this task .
