@@ -98,3 +98,6 @@ The target distribution is moderately imbalanced. Therefore, precision, recall, 
 - Visualisations: training/validation metric comparison, unseen-test confusion matrix, ROC curve, precision–recall curve and feature importance.
 # Important limitation
 The extract does not document the exact observation timestamp for every predictor. Some behavioural fields may have been collected during the same 30-day period as the target. Confirm the prediction point and remove any feature not available at that point before treating the model as a prospective prediction system. Feature importance is not causal evidence.
+
+## Link to the Presentation
+https://github.com/26445671/Data-Science-Capstone-Project/blob/main/video1520065075.mp4
